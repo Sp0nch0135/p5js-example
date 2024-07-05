@@ -4,7 +4,7 @@ let canvasHeight = 400;
 let points = [];
 let yPos = 0;
 let xPos = 0;
-let numDrops = 100;
+let numDrops = 300;
 
 
 function setup() {
@@ -24,8 +24,8 @@ function draw() {
 
 function raindrops() {
   for (let point in points) {
-  ellipse(points[point].xPos, points[point].yPos, 5, 5);
-  points[point].yPos += 5;
+  ellipse(points[point].xPos, points[point].yPos, 100, 5);
+  points[point].yPos += 1;
   if(points[point].yPos > canvasHeight) {
     points[point].yPos = 0;
     points[point].xPos = random(0, canvasWidth);
